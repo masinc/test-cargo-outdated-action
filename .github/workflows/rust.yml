@@ -13,4 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: cargo outdated
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: masinc/cargo-outdated-action@main
